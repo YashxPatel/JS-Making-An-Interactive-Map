@@ -66,6 +66,7 @@ function processBusinesses(data) {
 	let businesses = data.map((element) => {
 		let location = {
 			name: element.name,
+			address: element.formatted_address,
 			lat: element.geocodes.main.latitude,
 			long: element.geocodes.main.longitude
 		};
