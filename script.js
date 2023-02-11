@@ -49,7 +49,7 @@ async function getFoursquare(business) {
 		method: 'GET',
 		headers: {
 		Accept: 'application/json',
-		Authorization: 'fsq3ATzZbmcGhdeFafr73wZcnJ+LlN6bK+4dh19a7ClS4u8='
+		Authorization: 'fsq30vKpTl4bHuG5u9YozPjLKpVKnLr2cPAhoGrDYHhn8x4='
 		}
 	}
 	let limit = 5
@@ -73,13 +73,14 @@ function processBusinesses(data) {
 	})
 	return businesses
 }
-
+// event handlers
 window.onload = async () => {
 	const coords = await getCoords()
 	myMap.coordinates = coords
 	myMap.buildMap()
 }
 
+//submit button
 document.getElementById('submit').addEventListener('click', async (event) => {
 	event.preventDefault()
 	let business = document.getElementById('business').value
